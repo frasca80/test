@@ -9,4 +9,4 @@ Please check Java classes under com.fscandelli.syntaxtree package.
 
 
 [Q] If so, how would you adjust your code to avoid such a situation?   
-[A] By introducing a validation in ExpressionMap::setExpression to avoid the insertion of a symbol expression that introduces circular dependency
+[A] By introducing a validation in the constructor of ExpressionMap to avoid the presence of a symbol expression that introduces circular dependency

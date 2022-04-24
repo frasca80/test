@@ -1,17 +1,18 @@
 package com.fscandelli.syntaxtree;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public final class ExpressionMap {
 
-    private static final Map<String, Expression> MAP = new ConcurrentHashMap<>();
+    private  final Map<String, Expression> map ;
 
-    public Expression getExpression(String symbolName) {
-	return MAP.get(symbolName);
+    public ExpressionMap(Map<String, Expression> map) {
+	this.map = new HashMap<>(map);
     }
     
-    public void setExpression(String symbolName, Expression expression){
-	MAP.put(symbolName, expression);
+    public Expression getExpression(String symbolName) {
+	return map.get(symbolName);
     }
+    
 }
